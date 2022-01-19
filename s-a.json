@@ -1,0 +1,17 @@
+[
+	{
+		"filename":"img_nature_wide.jpg",
+		"caption":"Caption Text first",
+		"b":"01"
+	},
+	{
+		"filename":"img_snow_wide.jpg",
+		"caption":"Caption Text two",
+		"b":"02"
+	},	
+	{
+		"filename":"img_mountains_wide.jpg",
+		"caption":"Caption Text tree",
+		"b":"03"
+	}
+]

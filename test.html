@@ -1,0 +1,44 @@
+<style>
+	:root {
+								--height: 350px;
+								--count: 3;
+				}
+				section {
+								/*--count: attr(count);*/
+								height: var(--height,350px);
+								overflow: hidden;
+								position: relative;
+				}
+				section > section {
+								counter-reset: count;
+								overflow: visible;
+								position: absolute;
+								top: 0;
+								animation: i 2s infinite;
+				}
+				section > section > div {
+								position: relative;
+								counter-increment: count;
+				}
+				section > section > div::before {
+								position: absolute;
+								top: 0;
+								left: 0;
+								background-color: rgba(200, 100, 100, .5);
+								content: counter(count);
+				}
+				@keyframes i {
+								0% { top:0; }
+
+								50% { top:calc((var(--height,350px) * (var(--count,0) - 1)) * -1); }
+								100% { top:0; }
+				}
+</style>
+
+<section count="2">
+				<section>
+							<div><img src="./img_mountains_wide.jpg"/></div>
+							<div><img src="./img_nature_wide.jpg"/></div>
+							<div><img src="./img_snow_wide.jpg"/></div> 
+				</section>
+			</section>
